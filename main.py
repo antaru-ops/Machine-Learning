@@ -126,7 +126,6 @@ st.write(f'F-score for No Heart Disease = ', f_score_no)
 f_score_yes = 2 * npv * specificity / (npv + specificity)
 st.write(f'F-score for With Heart Disease = ', f_score_yes)
 
-
 pca = PCA(13)
 x_projected = pca.fit_transform(x)
 
@@ -134,9 +133,7 @@ x1 = x_projected[:, 7] #thalach = maximum heart rate achieve
 x2 = x_projected[:, -1]
 
 fig = plt.figure()
-plt.scatter(x1, x2,
-        c=y, alpha=0.8,
-        cmap='viridis')
+plt.scatter(x1, x2, c=y, alpha=0.8, cmap='viridis')
 
 plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
