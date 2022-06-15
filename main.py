@@ -28,7 +28,7 @@ def get_dataset(ds_name):
     ds_name == "Heart Disease"
     #ds = pd.read_csv(r'C:\Users\andre\Desktop\Jupyter Notebook\Data\heart.csv')
     url="https://github.com/antaru-ops/Machine-Learning/blob/main/heart.csv"
-    ds=pd.read_csv(url,error_bad_lines=False)
+    ds=pd.read_csv(url,error_bad_lines=False,thousands= r",")
     newds = ds.dropna()
     x = newds.iloc[:, :13]
     y = newds.iloc[:, -1]
