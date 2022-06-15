@@ -27,8 +27,8 @@ classifier_name = st.sidebar.selectbox("Select Classifier", ("Support Vector Mac
 def get_dataset(ds_name):
     ds_name == "Heart Disease"
     #ds = pd.read_csv(r'C:\Users\andre\Desktop\Jupyter Notebook\Data\heart.csv')
-    url="https://github.com/antaru-ops/Machine-Learning/blob/main/heart.csv"
-    ds=pd.read_csv(url,error_bad_lines=False,header = 0)
+    url=r"heart.csv"
+    ds=pd.read_csv(url,header = 0)
     newds = ds.dropna()
     x = newds.iloc[:, :13]
     y = newds.iloc[:, -1]
